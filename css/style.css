@@ -251,7 +251,7 @@ section.teste{
 }
 
 .video-funcoes {
-    position: absolute;
+    position: absolute; /* posiciona o vídeo atrás do conteúdo */
     top: 0;
     left: 0;
     width: 100%;
