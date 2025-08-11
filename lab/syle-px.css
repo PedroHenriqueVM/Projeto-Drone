@@ -1,0 +1,16 @@
+html {
+    font-size: 32px;
+}
+
+h1 {
+    font-size: 32px; /*2x o padrão */
+}
+
+p {
+    font-size: 16px;
+}
+
+button{
+    font-size: 14px;
+    padding: 10px 20px;
+}
