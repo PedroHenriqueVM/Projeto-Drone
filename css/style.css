@@ -7,8 +7,7 @@
     --cor-footer: #040404;
     --cor-especificacoes: #1E1D1D;
     --cor-texto: #FFFDFD;
-    --fonte: 'Roboto';
-
+    --fonte: 'Roboto', sans-serif;
 }
 
 * {
@@ -27,7 +26,6 @@ body {
     font-family: var(--fonte);
     background-color: var(--cor-menu);
     color: var(--cor-texto);
-    scroll-behavior: smooth;
 }
 
 header {
@@ -42,20 +40,13 @@ header {
     padding: 10px 20px;
 }
 
-
 .menu {
     display: flex;
-    width: 100vh;
     align-items: center;
     text-align: center;
     justify-content: center;
     gap: 20px;
-}
-
-header .menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* ajustado para largura total */
 }
 
 .logo {
@@ -67,14 +58,14 @@ header .menu {
     color: var(--cor-texto);
     justify-content: center;
     display: flex;
-    align-items: right;
+    /* align-items: right; removido pois inválido */
 }
 
 .logo img {
     width: auto;
     height: 65px;
-    align-items: right;
     margin-right: 10px;
+    /* align-items removido */
 }
 
 .menu ul {
@@ -97,11 +88,11 @@ button {
     cursor: pointer;
     height: 40px;
     font-size: 15px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #02542D;
-    transition: 0.3s;
 }
 
 /* HOME */
@@ -121,19 +112,20 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100vh;
-    object-fit: cover; /* cobre toda a tela */
-    z-index: -1; /* deixa o vídeo atrás do conteúdo */
+    object-fit: cover;
+    z-index: -1;
 }
 
 .content {
-    z-index: 1; /* texto em cima do vídeo */
+    z-index: 1;
     color: var(--cor-texto);
     text-align: center;
 }
 
 .content h1 {
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    text-align: center;
 }
 
 .content p {
@@ -143,10 +135,10 @@ button:hover {
 
 /* SEÇÃO 1 */
 .linha-video {
-    position: relative; /* para posicionar o vídeo */
+    position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden; /* para esconder o vídeo que ultrapassa a altura */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,7 +146,7 @@ button:hover {
 }
 
 #secao1 {
-    position: relative; /* posicionar o conteúdo em cima do vídeo */
+    position: relative;
     z-index: 2;
     width: 100%;
     height: 320px;
@@ -165,23 +157,13 @@ button:hover {
     background-color: var(--cor-fundo);
 }
 
-
-section.teste{
+section.teste {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.video-#secao1 {
-    position: absolute;
-    top: 0; /* posiciona o vídeo no topo */
-    left: 0; /* posiciona o vídeo na esquerda */
-    padding-top: 80px;
-    object-fit: cover;
-    z-index: -1;
 }
 
 .content-secao1 {
@@ -202,18 +184,22 @@ section.teste{
 
 .linha {
     background-color: var(--cor-fundo);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.linha #secao2 {
+/* Ajuste para #secao2 (antes .linha #secao2) */
+#secao2 {
     display: flex;
     gap: 20px;
     padding: 20px;
     background-color: var(--cor-fundo);
     align-items: center;
-    
 }
 
-.linha #secao2 .box {
+#secao2 .box {
     background-color: var(--cor-especificacoes);
     padding: 20px;
     border-radius: 8px;
@@ -232,7 +218,7 @@ section.teste{
 }
 
 .video-funcoes {
-    position: absolute; /* posiciona o vídeo atrás do conteúdo */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -242,8 +228,8 @@ section.teste{
 }
 
 .grid-funcoes {
-    display: grid; /* deixa o layout como grid */
-    grid-template-columns: repeat(3, 1fr); /* cria 3 colunas de tamanho igual */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding-bottom: 30px;
     width: 100%;
@@ -262,7 +248,6 @@ section.teste{
     display: flex;
     flex-direction: column;
     text-align: center;
-    
 }
 
 .grid-funcoes .box h3 {
@@ -273,29 +258,17 @@ section.teste{
     font-size: 14px;
 }
 
-.content h1 {
-    font-size: 40px;
-    text-align: center;
-    align-content: center;
-}
-h1 span{
-   font-size: 50px;
+h1 span {
+    font-size: 50px;
 }
 
 .container h1 {
-    margin: 50px
-}
-
-.linha {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    margin: 50px;
 }
 
 .linha-depoimento {
-    background-image: url('../img/img/img/Imagem\ 3.jpg');
-    background-size: cover; /* cobre toda a área */
+    background-image: url('../img/img/img/Imagem 3.jpg');
+    background-size: cover;
     padding: 60px 20px;
     text-align: center;
     color: var(--cor-texto);
@@ -308,7 +281,7 @@ h1 span{
 
 .depoimento-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* alinha os itens em linha */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     align-items: center;
     justify-items: center;
@@ -329,9 +302,9 @@ h1 span{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* mantém a proporção da imagem */
+    object-fit: cover;
     border: 4px solid #fff;
-    box-shadow: 0 0 15px #0006; 
+    box-shadow: 0 0 15px #0006;
 }
 
 .avaliacao-destaque {
@@ -374,8 +347,8 @@ h1 span{
 }
 
 .texto-contato {
-    flex: 1; /* ocupa todo o espaço disponível */
-    min-width: 300px; /* largura mínima */
+    flex: 1;
+    min-width: 300px;
 }
 
 .texto-contato h2 {
@@ -397,8 +370,6 @@ h1 span{
 .texto-contato img {
     width: auto;
     height: 200px;
-    align-items: center;
-    justify-content: center;
     padding-left: 100px;
 }
 
@@ -420,7 +391,7 @@ h1 span{
 }
 
 .form-contato label {
-    font-weight: bold; /* negrito para os rótulos */
+    font-weight: bold;
 }
 
 .form-contato input {
@@ -437,17 +408,19 @@ h1 span{
     cursor: pointer;
     margin-top: 10px;
 }
-.creditos{
+
+.creditos {
     background-color: var(--cor-footer);
     padding-bottom: 20px;
     width: 100%;
     text-align: center;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 @media (max-width: 1024px) {
-    .menu a{
+    .menu ul a {
         display: none;
     }
     .grid-funcoes {
@@ -460,17 +433,17 @@ h1 span{
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         align-items: center;
         justify-content: center;
     }
     header {
         padding: 10px;
     }
-    button{
+    button {
         align-items: end;
     }
-    .menu a{
+    .menu ul a {
         display: none;
         justify-content: space-between;
     }
@@ -491,17 +464,17 @@ h1 span{
         padding-left: 0;
         height: 150px;
     }
-    .teste{
+    .teste {
         padding-top: 40px;
     }
 }
 
 @media (max-width: 480px) {
-    body{
+    body {
         align-items: center;
         justify-content: center;
     }
-    .menu a{
+    .menu ul a {
         display: none;
         justify-content: space-between;
     }
