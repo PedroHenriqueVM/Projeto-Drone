@@ -46,7 +46,7 @@ header {
     text-align: center;
     justify-content: center;
     gap: 20px;
-    width: 100%; /* ajustado para largura total */
+    width: 100%;
 }
 
 .logo {
@@ -58,14 +58,12 @@ header {
     color: var(--cor-texto);
     justify-content: center;
     display: flex;
-    /* align-items: right; removido pois inválido */
 }
 
 .logo img {
     width: auto;
     height: 65px;
     margin-right: 10px;
-    /* align-items removido */
 }
 
 .menu ul {
@@ -190,7 +188,7 @@ section.teste {
     justify-content: center;
 }
 
-/* Ajuste para #secao2 (antes .linha #secao2) */
+/* Seçao 2 */
 #secao2 {
     display: flex;
     gap: 20px;
